@@ -1,0 +1,4 @@
+zhaoliu 10
+zhangsan 40
+wangwu 50
+lisi 60

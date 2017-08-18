@@ -6,8 +6,6 @@ using namespace std;
 int main(int argc, char *argv[])
 {
 
-
-
     []{
         cout << "hello world" << endl;
     };//这是一个类型，没有调用，无法输出

@@ -28,7 +28,7 @@ void print(T arr[], int len)
 	}
 
 }
-//测试基础数据类型
+//娴嬭瘯鍩虹鏁版嵁绫诲瀷
 void test01()
 {
 	int arr[] = {2, 8, 4, 3, 2, 9};
@@ -59,7 +59,7 @@ private:
 	string name;
 	int age;
 };
-//测试复杂数据类型
+//娴嬭瘯澶嶆潅鏁版嵁绫诲瀷
 void test02()
 {
 	person p[3] = {person("aa", 10), person("bb", 30), person("cc", 20)};

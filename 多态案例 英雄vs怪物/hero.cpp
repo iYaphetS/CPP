@@ -3,21 +3,21 @@
 
 hero::hero()
 {
-	//ÑªÁ¿
+	//è¡€é‡
 	Basehp = 2000;
-	//·ÀÓù
+	//é˜²å¾¡
 	Baseefense = 80;
-	//»ù´¡¹¥»÷Á¦
+	//åŸºç¡€æ”»å‡»åŠ›
 	Basedamage = 300;
-	//±©»÷ÂÊ
+	//æš´å‡»çŽ‡
 	Basecritrate = 0;
-	//±©»÷ÉËº¦¼Ó³É
+	//æš´å‡»ä¼¤å®³åŠ æˆ
 	Basedcritdamage = 0;
-	//¶ãÉÁÂÊ
+	//èº²é—ªçŽ‡
 	Baseevasionrate = 0;
-	//ÎäÆ÷
+	//æ­¦å™¨
 	pWeapon = NULL;
-	//Ãû×Ö
+	//åå­—
 	name = "invoker";
 }
 void hero::heroequipweapon(weapon *w)
@@ -34,7 +34,7 @@ void hero::heroequipweapon(weapon *w)
 		this->Baseevasionrate -= this->pWeapon->getBaseevasionrate();
 	}
 	this->pWeapon = w;
-	//×°±¸ÐÂÎäÆ÷ºóµÄÓ¢ÐÛÊôÐÔ±ä»¯
+	//è£…å¤‡æ–°æ­¦å™¨åŽçš„è‹±é›„å±žæ€§å˜åŒ–
 	this->Basedamage += this->pWeapon->getBasedamage();
 	this->Basecritrate += this->pWeapon->getBasecritrate();
 	this->Basedcritdamage += this->pWeapon->getBasecritdamage();
@@ -50,15 +50,15 @@ int hero::heroattackmonster(monster *m)
 	int totaldamage = Basedamage;
 	if (iscrit())
 	{
-		cout << "±©»÷!" << endl;
+		cout << "æš´å‡»!" << endl;
 		totaldamage += totaldamage * (Basedcritdamage / 100);
 	}
 
 	totaldamage -= m->Basedefense;
 	m->Basehp -= totaldamage;
 
-	cout << "Ó¢ÐÛ" << name << "¶Ô¹ÖÎï" << m->name << "Ôì³ÉÁË" << totaldamage << "µãÉËº¦!" << endl;
-	cout << "¹ÖÎïÑªÁ¿£º" << m->Basehp << endl;
+	cout << "è‹±é›„" << name << "å¯¹æ€ªç‰©" << m->name << "é€ æˆäº†" << totaldamage << "ç‚¹ä¼¤å®³!" << endl;
+	cout << "æ€ªç‰©è¡€é‡ï¼š" << m->Basehp << endl;
 	return m->Basehp;
 }
 

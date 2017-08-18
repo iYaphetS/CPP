@@ -16,14 +16,14 @@ public:
 	virtual void weaponskills(monster *m);
 	virtual ~weapon();
 public:
-	//基础伤害
+	//鍩虹浼ゅ
 	int Basedamage;
-	//基础暴击伤害加成
+	//鍩虹鏆村嚮浼ゅ鍔犳垚
 	int Basecritdamage;
-	//基础暴击发生概率
+	//鍩虹鏆村嚮鍙戠敓姒傜巼
 	int Basecritrate;
-	//基础闪避几率
+	//鍩虹闂伩鍑犵巼
 	int Baseevasionrate;
-	//武器名称
+	//姝﹀櫒鍚嶇О
 	string name;
 };

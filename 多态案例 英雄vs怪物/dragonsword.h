@@ -10,8 +10,8 @@ public:
 	dragonsword();
 	void weaponskills(monster *m);
 public:
-	//晕眩几率
+	//鏅曠湬鍑犵巼
 	int stunrate;
-	//晕眩回合
+	//鏅曠湬鍥炲悎
 	int stunround;
 };

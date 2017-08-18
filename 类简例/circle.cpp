@@ -26,14 +26,14 @@ void circle::pointANDcircle(point &p)
 
 	if (p2distance == r2distance)
 	{
-		cout << "point(" << p.get_x() << "," << p.get_y() << ")ÔÚÔ²ÉÏ" << endl;
+		cout << "point(" << p.get_x() << "," << p.get_y() << ")åœ¨åœ†ä¸Š" << endl;
 	}
 	else if (p2distance > r2distance)
 	{
-		cout << "point(" << p.get_x() << "," << p.get_y() << ")ÔÚÔ²Íâ" << endl;
+		cout << "point(" << p.get_x() << "," << p.get_y() << ")åœ¨åœ†å¤–" << endl;
 	}
 	else
 	{
-		cout << "point(" << p.get_x() << "," << p.get_y() << ")ÔÚÔ²ÄÚ" << endl;
+		cout << "point(" << p.get_x() << "," << p.get_y() << ")åœ¨åœ†å†…" << endl;
 	}
 }

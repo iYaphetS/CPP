@@ -5,12 +5,12 @@ using namespace std;
 #pragma warning(disable:4996)
 
 /*
-ʹ���ļ�IO��ȡa.txt�ļ��е���Ϣ������Person����
-ʹ��ѡ�����������С��������
-�������Ľ������д�뵽�ļ��У�д�뷽ʽ���ޣ�����ֹ���ļ���д��string����
+使用文件IO读取a.txt文件中的信息，构建Person对象，
+使用选择排序按年龄从小到大排序，
+将排序后的结果重新写入到文件中（写入方式不限），禁止向文件中写入string类型
 */
 
-//���� a.txt�ļ��е�����Ϊ
+//假如 a.txt文件中的内容为
 /*
 zhangsan 40
 lisi 60
@@ -36,15 +36,15 @@ void SelctSort(person *p, int len)
 }
 void rwfile()
 {
-	//���ļ�
+	//读文件
 	ifstream ifs("a.txt", ios::in);
 
 	if (!ifs)
 	{
-		cout << "�ļ���ʧ��" << endl;
+		cout << "文件打开失败" << endl;
 		return;
 	}
-	//��������
+	//计算行数
 	int count = 0;
 	char buf[1024] = { 0 };
 	while (ifs.getline(buf, 1024))
@@ -69,15 +69,15 @@ void rwfile()
 	}
 	ifs.close();
 
-	//����
+	//排序
 	SelctSort(p, count);
 
 
-	//д�ļ�
+	//写文件
 	ofstream ofs("a.txt", ios::out);
 	if (!ofs)
 	{
-		cout << "�ļ���ʧ��" << endl;
+		cout << "文件打开失败" << endl;
 		return;
 	}
 
@@ -147,7 +147,7 @@ void readfile(vector<person> &p)
 	}
 
 	char buf[1024] = {0};
-	//while (ifs >> buf)//�����ո�ͽ����浽buf����������һ���ַ���
+	//while (ifs >> buf)//读到空格就结束存到buf，继续读下一个字符串
 	while (ifs.getline(buf, 1024))
 	{
 		cout << buf << endl;

@@ -2,7 +2,7 @@
 using namespace std;
 #include <string>
 /*
-Ê¹ÓÃÄ£°åÊµÏÖ²åÈëÅÅĞò
+ä½¿ç”¨æ¨¡æ¿å®ç°æ’å…¥æ’åº
 */
 class person
 {
@@ -32,7 +32,7 @@ bool operator<(person &p1, person &p2)
 template <class T>
 void insertSort(T arr[], int size)
 {
-	//ÔÚÓĞĞòµÄĞòÁĞÉÏ²åÈëÔªËØ
+	//åœ¨æœ‰åºçš„åºåˆ—ä¸Šæ’å…¥å…ƒç´ 
 	for (int i = 1; i < size; i++)
 	{
 		T temp= arr[i];
@@ -52,29 +52,29 @@ void print(T arr[], int size)
 		cout << arr[i] << endl;
 	}
 }
-//²âÊÔÆÕÍ¨ÀàĞÍ
+//æµ‹è¯•æ™®é€šç±»å‹
 void test1()
 {
 	int arr[6] = {1, 2, 8, 3, 4, 10};
 	int len = sizeof(arr) / sizeof(int);
-	cout << "ÅÅĞòÇ°£º" << endl;
+	cout << "æ’åºå‰ï¼š" << endl;
 	print<int>(arr, len);
 
 	insertSort<int>(arr, len);
-	cout << "ÅÅĞòºó£º" << endl;
+	cout << "æ’åºåï¼š" << endl;
 	print<int>(arr, len);
 	
 }
-//²âÊÔ¸´ÔÓÀàĞÍ
+//æµ‹è¯•å¤æ‚ç±»å‹
 void test2()
 {
 	person parr[4] = { person("A", 10), person("B", 80), person("C", 40), person("D", 20) };
 	int len = sizeof(parr) / sizeof(person);
-	cout << "ÅÅĞòÇ°(ÄêÁäÅÅĞò)£º" << endl;
+	cout << "æ’åºå‰(å¹´é¾„æ’åº)ï¼š" << endl;
 	print<person>(parr, len);
 
 	insertSort<person>(parr, len);
-	cout << "ÅÅĞòºó(ÄêÁäÅÅĞò)£º" << endl;
+	cout << "æ’åºå(å¹´é¾„æ’åº)ï¼š" << endl;
 	print<person>(parr, len);
 }
 int main()

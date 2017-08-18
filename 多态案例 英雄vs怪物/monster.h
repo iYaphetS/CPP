@@ -11,16 +11,16 @@ public:
 	int monsterattackhero(hero *h);
 
 public:
-	//»ù´¡ÑªÁ¿
+	//åŸºç¡€è¡€é‡
 	int Basehp;
-	//»ù´¡·ÀÓù
+	//åŸºç¡€é˜²å¾¡
 	int Basedefense;
-	//»ù´¡¹¥»÷
+	//åŸºç¡€æ”»å‡»
 	int Basedamage;
-	//ÔÎÑ£»ØºÏ
+	//æ™•çœ©å›åˆ
 	int stunround;
-	//¹¥»÷miss
+	//æ”»å‡»miss
 	bool attackmiss;
-	//Ãû×Ö
+	//åå­—
 	string name;
 };

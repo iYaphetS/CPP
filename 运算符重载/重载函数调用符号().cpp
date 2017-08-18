@@ -26,7 +26,7 @@ int main()
 
 	int a = 10;
 	int b = 12;
-	int ret = fun(a, b);//·Âº¯Êý
+	int ret = fun(a, b);//ä»¿å‡½æ•°
 	cout << ret << endl;
 
 	dologic(fun);

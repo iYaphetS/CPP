@@ -40,20 +40,20 @@ void test01()
 	vector<int> v = {1, 5, 3, 8, 10};
 	for_each(v.begin(), v.end(), mybind2nd(myPrint(), 100));
 	/*bind2nd
-	mybind2ndº¯Êý 
-	1.µ÷ÓÃÖÐ¼äÊÊÅäÆ÷ÀàµÄÓÐ²Î¹¹Ôìº¯Êý
-	2.²¢½«ÄäÃû¶ÔÏó·µ»Ø
-	3.mybind2nd()ÕûÌåÊÇÒ»¸öÀà¶ÔÏó
+	mybind2ndå‡½æ•° 
+	1.è°ƒç”¨ä¸­é—´é€‚é…å™¨ç±»çš„æœ‰å‚æž„é€ å‡½æ•°
+	2.å¹¶å°†åŒ¿åå¯¹è±¡è¿”å›ž
+	3.mybind2nd()æ•´ä½“æ˜¯ä¸€ä¸ªç±»å¯¹è±¡
 
-	for_eachº¯Êý
-	1.º¯ÊýÄÚ²¿µ÷ÓÃÒ»¸ö±éÀúº¯Êý
+	for_eachå‡½æ•°
+	1.å‡½æ•°å†…éƒ¨è°ƒç”¨ä¸€ä¸ªéåŽ†å‡½æ•°
 	void _For_each_unchecked(_InIt _First, _InIt _Last, _Fn1& _Func)
 	{	// perform function for each element
 	for (; _First != _Last; ++_First)
 	_Func(*_First);
-	2. _func()µ÷ÓÃÁË¶ÔÏó_funcµÄ()µÄÖØÔØº¯Êý
-	3.Èç¹û_funcÊÇ×Ô¼ºÐ´µÄÒ»Ôªº¯Êý¶ÔÏó£¬¾Íµ÷ÓÃÕâ¸öÀàµÄ()µÄÖØÔØº¯Êý
-	4.Èç¹û_funcÊÇbind2d·µ»ØµÄÒ»¸öÄäÃû¶ÔÏó£¬¾Íµ÷ÓÃÕâ¸öÊÊÅäÆ÷ÀàµÄ()µÄÖØÔØº¯Êý
+	2. _func()è°ƒç”¨äº†å¯¹è±¡_funcçš„()çš„é‡è½½å‡½æ•°
+	3.å¦‚æžœ_funcæ˜¯è‡ªå·±å†™çš„ä¸€å…ƒå‡½æ•°å¯¹è±¡ï¼Œå°±è°ƒç”¨è¿™ä¸ªç±»çš„()çš„é‡è½½å‡½æ•°
+	4.å¦‚æžœ_funcæ˜¯bind2dè¿”å›žçš„ä¸€ä¸ªåŒ¿åå¯¹è±¡ï¼Œå°±è°ƒç”¨è¿™ä¸ªé€‚é…å™¨ç±»çš„()çš„é‡è½½å‡½æ•°
 
 	*/
 }

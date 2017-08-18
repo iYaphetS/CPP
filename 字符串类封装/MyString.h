@@ -4,35 +4,35 @@ using namespace std;
 
 class MyString
 {
-	//×Ö·û´®Êä³ö cout << str
+	//å­—ç¬¦ä¸²è¾“å‡º cout << str
 	friend ostream& operator<<(ostream &os, const MyString &str);
-	//×Ö·û´®ÊäÈë cout >> str
+	//å­—ç¬¦ä¸²è¾“å…¥ cout >> str
 	friend istream& operator>>(istream &in, MyString &str);
 
 public:
-	//ÎŞ²Î¹¹Ôìº¯Êı
+	//æ— å‚æ„é€ å‡½æ•°
 	MyString();
-	//ÓĞ²Î¹¹Ôìº¯Êı MyString str = "hello"
+	//æœ‰å‚æ„é€ å‡½æ•° MyString str = "hello"
 	MyString(const char *str);
-	//ÓĞ²Î¹¹Ôìº¯Êı MyString str(2, 'c')
+	//æœ‰å‚æ„é€ å‡½æ•° MyString str(2, 'c')
 	MyString(int n, char c);
-	//¿½±´¹¹Ôìº¯Êı MyString str1 = str2
+	//æ‹·è´æ„é€ å‡½æ•° MyString str1 = str2
 	MyString(const MyString &str);
-	//¸³Öµ=ÖØÔØ  str1 = str3
+	//èµ‹å€¼=é‡è½½  str1 = str3
 	MyString& operator=(const MyString &str);
-	//Îö¹¹º¯Êı
+	//ææ„å‡½æ•°
 	~MyString();
 
-	//×Ö·û´®Æ´½Ó ret = str1 + str2
+	//å­—ç¬¦ä¸²æ‹¼æ¥ ret = str1 + str2
 	MyString operator+(const MyString &str);
 	//ret = str1 + "hello"
 	MyString operator+(const char *str);
-	//×Ö·û´®×·¼Ó str1 += str2
+	//å­—ç¬¦ä¸²è¿½åŠ  str1 += str2
 	MyString& operator+=(const MyString &str);
 	//str1 += "hello"
 	MyString& operator+=(const char *str);
 
-	//×Ö·û´®ÓĞĞ§³¤¶È
+	//å­—ç¬¦ä¸²æœ‰æ•ˆé•¿åº¦
 	int mysize();
 private:
 	char *pString;

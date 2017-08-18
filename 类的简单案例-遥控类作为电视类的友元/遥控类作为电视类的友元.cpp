@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
 /*
-Çë±àĞ´µçÊÓ»úÀà£¬µçÊÓ»úÓĞ¿ª»úºÍ¹Ø»ú×´Ì¬£¬ÓĞÒôÁ¿£¬ÓĞÆµµÀ£¬
-Ìá¹©ÒôÁ¿²Ù×÷µÄ·½·¨£¬ÆµµÀ²Ù×÷µÄ·½·¨¡£ÓÉÓÚµçÊÓ»úÖ»ÄÜÖğÒ»µ÷ÕûÆµµÀ£¬
-²»ÄÜÖ¸¶¨ÆµµÀ£¬Ôö¼ÓÒ£¿ØÀà£¬Ò£¿ØÀà³ıÁËÓµÓĞµçÊÓ»úÒÑÓĞµÄ¹¦ÄÜ£¬
-ÔÙÔö¼Ó¸ù¾İÊäÈëµ÷Ì¨¹¦ÄÜ¡£
+è¯·ç¼–å†™ç”µè§†æœºç±»ï¼Œç”µè§†æœºæœ‰å¼€æœºå’Œå…³æœºçŠ¶æ€ï¼Œæœ‰éŸ³é‡ï¼Œæœ‰é¢‘é“ï¼Œ
+æä¾›éŸ³é‡æ“ä½œçš„æ–¹æ³•ï¼Œé¢‘é“æ“ä½œçš„æ–¹æ³•ã€‚ç”±äºç”µè§†æœºåªèƒ½é€ä¸€è°ƒæ•´é¢‘é“ï¼Œ
+ä¸èƒ½æŒ‡å®šé¢‘é“ï¼Œå¢åŠ é¥æ§ç±»ï¼Œé¥æ§ç±»é™¤äº†æ‹¥æœ‰ç”µè§†æœºå·²æœ‰çš„åŠŸèƒ½ï¼Œ
+å†å¢åŠ æ ¹æ®è¾“å…¥è°ƒå°åŠŸèƒ½ã€‚
 */
 class Televation
 {
@@ -14,7 +14,7 @@ public:
 	enum {minvol, maxvol = 100};
 	enum {minchan = 1, maxchan = 255};
 
-	//Ä¬ÈÏÇé¿öÏÂµÄµçÊÓµÄÈıÖÖÊôĞÔ
+	//é»˜è®¤æƒ…å†µä¸‹çš„ç”µè§†çš„ä¸‰ç§å±æ€§
 	Televation()
 	{
 		Tstatus = off;
@@ -22,7 +22,7 @@ public:
 		Tchannle = minchan;
 	}
 
-	//´ò¿ªµçÊÓ
+	//æ‰“å¼€ç”µè§†
 	void statusSet()
 	{
 		this->Tstatus = this->Tstatus == off ? on : off;
@@ -64,15 +64,15 @@ public:
 	}
 	void showTelevetion()
 	{
-		cout << "µçÊÓ£º" << (this->Tstatus == on ? "ÒÑ¿ª»ú" : "ÒÑ¹Ø»ú") << endl;
-		cout << "ÒôÁ¿£º" << this->Tvolume << endl;
-		cout << "ÆµµÀ£º" << this->Tchannle << endl;
+		cout << "ç”µè§†ï¼š" << (this->Tstatus == on ? "å·²å¼€æœº" : "å·²å…³æœº") << endl;
+		cout << "éŸ³é‡ï¼š" << this->Tvolume << endl;
+		cout << "é¢‘é“ï¼š" << this->Tchannle << endl;
 	}
 
 private:
-	int Tstatus;//µçÊÓ×´Ì¬
-	int Tvolume;//µçÊÓÒôÁ¿
-	int Tchannle;//µçÊÓÆµµÀ
+	int Tstatus;//ç”µè§†çŠ¶æ€
+	int Tvolume;//ç”µè§†éŸ³é‡
+	int Tchannle;//ç”µè§†é¢‘é“
 };
 
 class Rmote
@@ -82,7 +82,7 @@ public:
 	{
 		this->_Televation = televation;
 	}
-	//´ò¿ªµçÊÓ
+	//æ‰“å¼€ç”µè§†
 	void statusSet()
 	{
 		this->_Televation.statusSet();
@@ -119,12 +119,12 @@ private:
 	Televation  _Televation;
 };
 
-//µçÊÓ²Ù×÷
+//ç”µè§†æ“ä½œ
 void test1()
 {
 	Televation t;
 	t.showTelevetion();
-	t.statusSet();//¿ª»ú
+	t.statusSet();//å¼€æœº
 	cout << "------" << endl;
 	for (int i = 0; i < 10; i++)
 	{
@@ -140,12 +140,12 @@ void test1()
 	t.volumeDown();
 	t.showTelevetion();
 }
-//Ò£¿ØÆ÷²Ù×÷
+//é¥æ§å™¨æ“ä½œ
 void test2()
 {
 	Televation t;
 	Rmote r(t);
-	r.statusSet();//¿ª»ú
+	r.statusSet();//å¼€æœº
 	cout << "------" << endl;
 	for (int i = 0; i < 10; i++)
 	{

@@ -5,11 +5,11 @@ using namespace std;
 
 int main()
 {
-	point p;//µãµÄÊµÀý»¯
+	point p;//ç‚¹çš„å®žä¾‹åŒ–
 	p.set_x(10);
 	p.set_y(20);
 
-	circle c;//Ô²µÄÊµÀý»¯
+	circle c;//åœ†çš„å®žä¾‹åŒ–
 	c.set_mp(5, 6);
 	c.set_mr(8);
 

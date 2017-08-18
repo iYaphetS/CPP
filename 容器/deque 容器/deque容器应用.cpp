@@ -6,7 +6,7 @@ using namespace std;
 #include <string>
 #include <ctime>
 
-//6¸öÑ§Éú±íÑİ£¬10¸öÆÀÎ¯´ò·Ö£¬°´ÕÕÆ½¾Ö·Ö½«Ñ§Éú´òÓ¡³öÀ´
+//6ä¸ªå­¦ç”Ÿè¡¨æ¼”ï¼Œ10ä¸ªè¯„å§”æ‰“åˆ†ï¼ŒæŒ‰ç…§å¹³å±€åˆ†å°†å­¦ç”Ÿæ‰“å°å‡ºæ¥
 class Students
 {
 public:
@@ -26,7 +26,7 @@ void createStudent(vector<Students> &v)
 	{
 		Students stu;
 		stu.score = 0;
-		stu.name = "Ñ§Éú";
+		stu.name = "å­¦ç”Ÿ";
 		stu.name += nameArr[i];
 		v.push_back(stu);
 	}
@@ -35,7 +35,7 @@ void setScore(vector<Students> &v)
 {
 	srand((unsigned)time(NULL));
 	//for (vector<Students>::iterator it = v.begin(); it != v.end(); it++)
-	for (auto &it : v)//ÒªÓÃÒıÓÃ£¬²»È»ÊÇ¾Ö²¿±äÁ¿¡£¡£¡£¡£¡£¡£
+	for (auto &it : v)//è¦ç”¨å¼•ç”¨ï¼Œä¸ç„¶æ˜¯å±€éƒ¨å˜é‡ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚
 	{
 		deque<int> d1;
 		for (int i = 0; i < 10; i++)
@@ -43,7 +43,7 @@ void setScore(vector<Students> &v)
 			int sco = rand() % 51 + 50;
 			d1.push_back(sco);
 		}
-		sort(d1.begin(),d1.end());//Ä¬ÈÏÉıĞò
+		sort(d1.begin(),d1.end());//é»˜è®¤å‡åº
 		d1.pop_back();
 		d1.pop_front();
 		int sum = 0;
@@ -59,7 +59,7 @@ void setScore(vector<Students> &v)
 
 void showStudents(vector<Students> &v)
 {
-	sort(v.begin(), v.end());//ÓÉĞ¡µ½´ó
+	sort(v.begin(), v.end());//ç”±å°åˆ°å¤§
 	for (vector<Students>::reverse_iterator rit = v.rbegin(); rit != v.rend(); rit++)
 	//for (auto it : v)
 	{

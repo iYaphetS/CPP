@@ -16,7 +16,7 @@ void test01()
 	vector<int>::iterator ret = find(v.begin(), v.end(), 4);
 	if (ret == v.end())
 	{
-		cout << "Ã»ÓĞÕÒµ½" << endl;
+		cout << "æ²¡æœ‰æ‰¾åˆ°" << endl;
 	}
 	else
 	{
@@ -24,11 +24,11 @@ void test01()
 	}
 }
 
-/*²éÕÒÏàÁÚÔªËØÏàÍ¬
+/*æŸ¥æ‰¾ç›¸é‚»å…ƒç´ ç›¸åŒ
 adjacent_find(iterator beg, iterator end, _callback);
-_callbackº¯Êı¶ÔÏóÄ¬ÈÏÊÇ¼òµ¥Öµ==£¬¶ÔÓÚ¶ÔÏó
-//1. ÖØÔØ==ºÅÔËËã·û
-//2. ÊÖ¶¯Ìí¼ÓÁ½¸ö¶ÔÏóµÄ±È½Ï¹æÔò(º¯Êı¶ÔÏó)
+_callbackå‡½æ•°å¯¹è±¡é»˜è®¤æ˜¯ç®€å•å€¼==ï¼Œå¯¹äºå¯¹è±¡
+//1. é‡è½½==å·è¿ç®—ç¬¦
+//2. æ‰‹åŠ¨æ·»åŠ ä¸¤ä¸ªå¯¹è±¡çš„æ¯”è¾ƒè§„åˆ™(å‡½æ•°å¯¹è±¡)
 */
 void test02()
 {
@@ -36,7 +36,7 @@ void test02()
 	vector<int>::iterator ret = adjacent_find(v.begin(), v.end());
 	if (ret == v.end())
 	{
-		cout << "Ã»ÓĞÕÒµ½" << endl;
+		cout << "æ²¡æœ‰æ‰¾åˆ°" << endl;
 	}
 	else
 	{
@@ -44,14 +44,14 @@ void test02()
 	}
 }
 
-/*----¶ş·Ö²éÕÒ
+/*----äºŒåˆ†æŸ¥æ‰¾
 bool binary_search(iterator beg, iterator end, value);
 */
 void test03()
 {
-	/*¶ş·Ö²éÕÒµÄÌõ¼ş
-	1.ÈİÆ÷µÄÊı¾İÊÇÓĞĞò(Ä¬ÈÏÉıĞò)
-	2.²éÕÒË³Ğò£¨Ä¬ÈÏless<int>£©ÒªÓëÈİÆ÷µÄË³Ğò±ØĞëÒ»Ñù	
+	/*äºŒåˆ†æŸ¥æ‰¾çš„æ¡ä»¶
+	1.å®¹å™¨çš„æ•°æ®æ˜¯æœ‰åº(é»˜è®¤å‡åº)
+	2.æŸ¥æ‰¾é¡ºåºï¼ˆé»˜è®¤less<int>ï¼‰è¦ä¸å®¹å™¨çš„é¡ºåºå¿…é¡»ä¸€æ ·	
 	*/
 	//vector<int> v = { 1, 2,  5, 2, 9,4, 3 };err
 	vector<int> v = { 1, 2,  3, 4, 5,6, 7 ,8,9};
@@ -64,11 +64,11 @@ void test03()
 	bool ret = binary_search(v.begin(), v.end(), 1, greater<int>());
 	if (ret)
 	{
-		cout << "ÕÒµ½ÁË" << endl;
+		cout << "æ‰¾åˆ°äº†" << endl;
 	}
 	else
 	{
-		cout << "Ã»ÓĞÕÒµ½" << endl;
+		cout << "æ²¡æœ‰æ‰¾åˆ°" << endl;
 	}
 }
 
@@ -82,7 +82,7 @@ public:
 		this->name = name;
 		this->age = age;
 	}
-	bool operator==(const person &p)//Òª¼Óconst
+	bool operator==(const person &p)//è¦åŠ const
 	{
 		return this->name == p.name && this->age == p.age;
 	}
@@ -97,7 +97,7 @@ private:
 class Myfun : public binary_function<person, person, bool>
 {
 public:
-	//²ÎÊıÒª¼Óconst
+	//å‚æ•°è¦åŠ const
 	bool operator()(const person &p, const person &param) const
 	{
 		return param.name == p.name && param.age == p.age;
@@ -151,7 +151,7 @@ void test06()
 {
 	vector<person> v = { person("aa", 10), person("aa", 10), person("bb", 20), person("cc", 30) };
 
-	//´æ´¢¶ÔÏó£¬ÖØÔØ==
+	//å­˜å‚¨å¯¹è±¡ï¼Œé‡è½½==
 	person temp("aa", 10);;
 	int ret = count(v.begin(), v.end(), temp);
 	cout << ret << endl;
@@ -163,7 +163,7 @@ void test06()
 	v1.push_back(new person("bb", 20));
 	v1.push_back(new person("cc", 30));
 	
-	//ÓÃcount_if
+	//ç”¨count_if
 	ret = count_if(v1.begin(), v1.end(), bind2nd(personcompare(), &temp));
 
 	cout << ret << endl;

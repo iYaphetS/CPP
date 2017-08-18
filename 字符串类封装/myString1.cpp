@@ -6,7 +6,7 @@ MyString::MyString()
 	this->mSize = 0;
 	this ->pAddress = new char[mSize + 1];
 	memset(pAddress, 0, mSize + 1);
-	pAddress[0] = '\0';//ÉÏÃæÇå¿ÕÕâÀï¿ÉÒÔ²»Ğ´
+	pAddress[0] = '\0';//ä¸Šé¢æ¸…ç©ºè¿™é‡Œå¯ä»¥ä¸å†™
 }
 MyString::MyString(int n, char c)
 {
@@ -56,7 +56,7 @@ MyString& MyString::operator=(const char* str)
 }
 MyString::~MyString()
 {
-	this->mSize = 0;//×¢ÒâÕâÒªÖÃ0
+	this->mSize = 0;//æ³¨æ„è¿™è¦ç½®0
 	if (this->pAddress != NULL)
 	{
 		delete[]pAddress;
@@ -67,7 +67,7 @@ MyString::~MyString()
 //str1 + str2
 MyString MyString::operator+(const MyString& str)
 {
-	MyString temp;//Õâ¸öÁÙÊ±¶ÔÏóÒ²¿ÉÒÔÔÚÊı¾İÈ·¶¨ºó´´½¨£¨µ÷ÓÃÓĞ²Î¹¹Ôìº¯Êı£©
+	MyString temp;//è¿™ä¸ªä¸´æ—¶å¯¹è±¡ä¹Ÿå¯ä»¥åœ¨æ•°æ®ç¡®å®šååˆ›å»ºï¼ˆè°ƒç”¨æœ‰å‚æ„é€ å‡½æ•°ï¼‰
 	if (temp.pAddress != NULL)
 	{
 		delete[]temp.pAddress;
@@ -110,12 +110,12 @@ MyString& MyString::operator+=(const MyString& str)
 	temp.mSize = this->mSize + str.mSize;
 	temp.pAddress = new char[temp.mSize + 1];
 	memset(temp.pAddress, 0, temp.mSize + 1);
-	strcat(temp.pAddress, this->pAddress);//ÉÏÃæÇå¿Õ£¬ÕâÀï²ÅÄÜÓÃstrcat£¬²»È»Ê¹ÓÃstrcpy
+	strcat(temp.pAddress, this->pAddress);//ä¸Šé¢æ¸…ç©ºï¼Œè¿™é‡Œæ‰èƒ½ç”¨strcatï¼Œä¸ç„¶ä½¿ç”¨strcpy
 	strcat(temp.pAddress, str.pAddress);
 	
-	*this = temp;//µ÷ÓÃ¸³Öµº¯Êı
+	*this = temp;//è°ƒç”¨èµ‹å€¼å‡½æ•°
 	return *this;
-	/*¿ÉÒÔÖ±½Óµ÷ÓÃÉÏÃæµÄÖØÔØº¯Êı
+	/*å¯ä»¥ç›´æ¥è°ƒç”¨ä¸Šé¢çš„é‡è½½å‡½æ•°
 	*this = *this + str;
 	*/
 }
@@ -136,7 +136,7 @@ MyString& MyString::operator+=(const char *s)
 
 	*this = temp;
 	return *this;
-	/*¿ÉÒÔÖ±½Óµ÷ÓÃÉÏÃæµÄÖØÔØº¯Êı
+	/*å¯ä»¥ç›´æ¥è°ƒç”¨ä¸Šé¢çš„é‡è½½å‡½æ•°
 	*this = *this + s;
 	*/
 }

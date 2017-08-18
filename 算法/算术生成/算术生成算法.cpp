@@ -40,7 +40,7 @@ public:
 	}
 };
 //accumulate(iterator beg, iterator end, value) 
-//½«ÈİÆ÷µÄÔªËØ½øĞĞÀÛ¼Ó²Ù×÷£¬·µ»ØÀÛ¼Ó½á¹û
+//å°†å®¹å™¨çš„å…ƒç´ è¿›è¡Œç´¯åŠ æ“ä½œï¼Œè¿”å›ç´¯åŠ ç»“æœ
 void test01()
 {
 	vector<person> p = {person("aa", 10), person("bb", 20), person("cc", 30)};

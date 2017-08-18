@@ -4,25 +4,25 @@
 class MyString
 {
 private:
-	char* pAddress; //×Ö·û´®Êµ¼Ê´æ´¢µØÖ·
-	int mSize; //×Ö·û´®´óĞ¡
+	char* pAddress; //å­—ç¬¦ä¸²å®é™…å­˜å‚¨åœ°å€
+	int mSize; //å­—ç¬¦ä¸²å¤§å°
 public:
-	MyString(); //ÎŞ²Î¹¹Ôì 
-	MyString(int n, char c); //ÓĞ²Î¹¹Ôì£¬Ö¸¶¨´óĞ¡ºÍ³õÊ¼Öµ
-	MyString(const MyString& str); //¿½±´¹¹Ôì
-	MyString& operator=(const MyString& str); //¸³ÖµÔËËã·ûÖØÔØ
-	MyString& operator=(const char* str); //¸³ÖµÔËËã·ûÖØÔØ
-	~MyString(); //Îö¹¹º¯Êı
+	MyString(); //æ— å‚æ„é€  
+	MyString(int n, char c); //æœ‰å‚æ„é€ ï¼ŒæŒ‡å®šå¤§å°å’Œåˆå§‹å€¼
+	MyString(const MyString& str); //æ‹·è´æ„é€ 
+	MyString& operator=(const MyString& str); //èµ‹å€¼è¿ç®—ç¬¦é‡è½½
+	MyString& operator=(const char* str); //èµ‹å€¼è¿ç®—ç¬¦é‡è½½
+	~MyString(); //ææ„å‡½æ•°
 
 
-	MyString operator+(const MyString& str); //¼ÓºÅÔËËã·ûÖØÔØ
-	MyString operator+(const char *s); //¼ÓºÅÔËËã·ûÖØÔØ
+	MyString operator+(const MyString& str); //åŠ å·è¿ç®—ç¬¦é‡è½½
+	MyString operator+(const char *s); //åŠ å·è¿ç®—ç¬¦é‡è½½
 
-	MyString& operator+=(const MyString& str); //¼ÓµÈÔËËã·ûÖØÔØ
-	MyString& operator+=(const char *s); //¼ÓµÈÔËËã·ûÖØÔØ
+	MyString& operator+=(const MyString& str); //åŠ ç­‰è¿ç®—ç¬¦é‡è½½
+	MyString& operator+=(const char *s); //åŠ ç­‰è¿ç®—ç¬¦é‡è½½
 
-	char& operator[](int index); //ÏÂ±êÔËËã·ûÖØÔØ
-	int Size(); //·µ»Ø×Ö·û´®³¤¶È
-	friend std::ostream& operator<<(std::ostream &out, MyString &str); //Êä³öÔËËã·ûÖØÔØ
-	friend std::istream& operator >> (std::istream &in, MyString &str); //ÊäÈëÔËËã·ûÖØÔØ
+	char& operator[](int index); //ä¸‹æ ‡è¿ç®—ç¬¦é‡è½½
+	int Size(); //è¿”å›å­—ç¬¦ä¸²é•¿åº¦
+	friend std::ostream& operator<<(std::ostream &out, MyString &str); //è¾“å‡ºè¿ç®—ç¬¦é‡è½½
+	friend std::istream& operator >> (std::istream &in, MyString &str); //è¾“å…¥è¿ç®—ç¬¦é‡è½½
 };

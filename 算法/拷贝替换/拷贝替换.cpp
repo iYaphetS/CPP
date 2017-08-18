@@ -36,7 +36,7 @@ void test01()
 }
 void test02()
 {
-	//swap Á½¸öÈİÆ÷µÄ´óĞ¡ÊÇÒ»ÑùµÄ
+	//swap ä¸¤ä¸ªå®¹å™¨çš„å¤§å°æ˜¯ä¸€æ ·çš„
 	vector<int> v1 = { 1, 3, 5, 8, 10 };
 	vector<int> v2 = {2, 4, 6, 10, 11};
 
@@ -56,7 +56,7 @@ void test02()
 }
 
 //replace_if(iterator beg, iterator end, _callback, newvalue)
-//°´ÕÕÌõ¼şÀ´Ìæ»»ÈİÆ÷ÖĞµÄÖµ
+//æŒ‰ç…§æ¡ä»¶æ¥æ›¿æ¢å®¹å™¨ä¸­çš„å€¼
 
 class conditionReplace : public binary_function<int, int, bool>
 {
@@ -70,7 +70,7 @@ void test03()
 {
 	vector<int> v1 = {1, 4, 5, 6, 3, 11};
 
-	//°Ñ´óÓÚ4µÄ¶¼Ìæ»»³É666
+	//æŠŠå¤§äº4çš„éƒ½æ›¿æ¢æˆ666
 	replace_if(v1.begin(), v1.end(), bind2nd(conditionReplace(), 4), 666);
 	for_each(v1.begin(), v1.end(), [](int val)
 	{

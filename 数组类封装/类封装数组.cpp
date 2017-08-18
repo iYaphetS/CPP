@@ -29,11 +29,11 @@ void test()
 	arr2.pushFront(200);
 	cout << arr2 << endl;
 
-	//¿½±´¹¹Ôì
+	//æ‹·è´æž„é€ 
 	Array arr3(arr1);
 	cout << arr3 << endl;
 
-	//¸³Öµº¯Êý
+	//èµ‹å€¼å‡½æ•°
 	Array arr4;
 	arr4 = arr2;
 	cout << arr4 << endl;

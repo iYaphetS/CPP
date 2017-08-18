@@ -8,7 +8,7 @@ ostream& operator<<(ostream &os, const MyString &str)
 }
 istream& operator>>(istream &in, MyString &str)
 {
-	//½«ÊäÈë·¨×Ö·û´®·ÅÔÚ»º³åÇø
+	//å°†è¾“å…¥æ³•å­—ç¬¦ä¸²æ”¾åœ¨ç¼“å†²åŒº
 	char buf[1024];
 	memset(buf, 0, sizeof(buf));
 	in.getline(buf, 1024);
@@ -18,7 +18,7 @@ istream& operator>>(istream &in, MyString &str)
 		delete[]str.pString;
 		str.pString = NULL;
 	}
-	//½«»º´æÇøµÄÄÚÈİ¿½±´µ½¶ÔÏó³ÉÔ±±äÁ¿Ö¸ÏòµÄ¶Ñ¿Õ¼äÖĞÈ¥
+	//å°†ç¼“å­˜åŒºçš„å†…å®¹æ‹·è´åˆ°å¯¹è±¡æˆå‘˜å˜é‡æŒ‡å‘çš„å †ç©ºé—´ä¸­å»
 	str.size = strlen(buf);
 	char *newspace = new char[str.size + 1];
 	memset(newspace, 0, str.size + 1);
@@ -29,7 +29,7 @@ istream& operator>>(istream &in, MyString &str)
 }
 
 
-//ÎŞ²Î¹¹Ôìº¯Êı
+//æ— å‚æ„é€ å‡½æ•°
 MyString::MyString()
 {
 	size = 0;
@@ -38,7 +38,7 @@ MyString::MyString()
 	pString[0] = '\0';//**
 	
 }
-//ÓĞ²Î¹¹Ôìº¯Êı MyString str = "hello"
+//æœ‰å‚æ„é€ å‡½æ•° MyString str = "hello"
 MyString::MyString(const char *str)
 {
 	size = strlen(str);
@@ -47,7 +47,7 @@ MyString::MyString(const char *str)
 	strcpy(pString, str);
 	
 }
-//ÓĞ²Î¹¹Ôìº¯Êı MyString str(2, 'c')
+//æœ‰å‚æ„é€ å‡½æ•° MyString str(2, 'c')
 MyString::MyString(int n, char c)
 {
 	size = n;
@@ -59,7 +59,7 @@ MyString::MyString(int n, char c)
 	}
 }
 
-//¿½±´¹¹Ôìº¯Êı MyString str1 = str2
+//æ‹·è´æ„é€ å‡½æ•° MyString str1 = str2
 MyString::MyString(const MyString &str)
 {
 	size = str.size;
@@ -67,7 +67,7 @@ MyString::MyString(const MyString &str)
 	memset(pString, 0, size + 1);
 	strcpy(pString, str.pString);
 }
-//¸³Öµ=ÖØÔØ  str1 = str3
+//èµ‹å€¼=é‡è½½  str1 = str3
 MyString& MyString::operator=(const MyString &str)
 {
 	if (pString != NULL)
@@ -83,7 +83,7 @@ MyString& MyString::operator=(const MyString &str)
 	return *this;
 }
 
-//Îö¹¹º¯Êı
+//ææ„å‡½æ•°
 MyString::~MyString()
 {
 	if (pString != NULL)
@@ -93,7 +93,7 @@ MyString::~MyString()
 	}
 }
 
-//×Ö·û´®Æ´½Ó ret = str1 + str2
+//å­—ç¬¦ä¸²æ‹¼æ¥ ret = str1 + str2
 MyString MyString::operator+(const MyString &str)
 {
 	int newsize = strlen(pString) + strlen(str.pString);
@@ -102,9 +102,9 @@ MyString MyString::operator+(const MyString &str)
 	strcat(newspace, pString);
 	strcat(newspace, str.pString);
 
-	MyString temp(newspace);//²úÉúÁãÊ±¶ÔÏó
-	return temp;//·µ»ØÁãÊ±¶ÔÏó£¬Êµ¼Ê¿½±´Ò»·İÄäÃûÄäÃû¶ÔÏó·µ»Ø£¨µ÷ÓÃÕßÈç¹ûÃ»ÓĞÓÃ¶ÔÏóÀ´½Ó
-	//Õâ¸öÄäÃû¶ÔÏó,ÄäÃû¶ÔÏó½«±»Ïú»Ù£©£¬ÁãÊ±¶ÔÏó±»Ïú»Ù
+	MyString temp(newspace);//äº§ç”Ÿé›¶æ—¶å¯¹è±¡
+	return temp;//è¿”å›é›¶æ—¶å¯¹è±¡ï¼Œå®é™…æ‹·è´ä¸€ä»½åŒ¿ååŒ¿åå¯¹è±¡è¿”å›ï¼ˆè°ƒç”¨è€…å¦‚æœæ²¡æœ‰ç”¨å¯¹è±¡æ¥æ¥
+	//è¿™ä¸ªåŒ¿åå¯¹è±¡,åŒ¿åå¯¹è±¡å°†è¢«é”€æ¯ï¼‰ï¼Œé›¶æ—¶å¯¹è±¡è¢«é”€æ¯
 }
 //ret = str1 + "hello"
 MyString MyString::operator+(const char *str)
@@ -118,7 +118,7 @@ MyString MyString::operator+(const char *str)
 	MyString temp(newspace);
 	return temp;
 }
-//×Ö·û´®×·¼Ó str1 += str2
+//å­—ç¬¦ä¸²è¿½åŠ  str1 += str2
 MyString& MyString::operator+=(const MyString &str)
 {
 	int newsize = strlen(pString) + strlen(str.pString);
@@ -157,7 +157,7 @@ MyString& MyString::operator+=(const char *str)
 	return *this;
 }
 
-//×Ö·û´®ÓĞĞ§³¤¶È
+//å­—ç¬¦ä¸²æœ‰æ•ˆé•¿åº¦
 int MyString::mysize()
 {
 	return size;

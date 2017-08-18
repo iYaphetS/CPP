@@ -9,13 +9,13 @@ private:
 	stack<int> s1;
 	stack<int> s2;
 public:
-	//s1Ñ¹Õ»---Èë¶Ó£¬s1³öÕ»ÔªËØµ½s2ÈëÕ»£¬ s2³öÕ»----³ö¶Ó
-	//Èë¶Ó
+	//s1å‹æ ˆ---å…¥é˜Ÿï¼Œs1å‡ºæ ˆå…ƒç´ åˆ°s2å…¥æ ˆï¼Œ s2å‡ºæ ˆ----å‡ºé˜Ÿ
+	//å…¥é˜Ÿ
 	void Queue::Push(const int& val)
 	{
 		s1.push(val);
 	}
-	//³ö¶Ó
+	//å‡ºé˜Ÿ
 	void Queue::Pop()
 	{
 #if 0
@@ -52,7 +52,7 @@ public:
 		}
 		s2.pop();
 	}
-	//·µ»Ø¶ÓÊ×ÔªËØ
+	//è¿”å›é˜Ÿé¦–å…ƒç´ 
 	int& Queue::Front()
 	{
 		//return s2.top();
@@ -66,7 +66,7 @@ public:
 		}
 		return s2.top();
 	}
-	//·µ»Ø¶ÓÎ²ÔªËØ
+	//è¿”å›é˜Ÿå°¾å…ƒç´ 
 	int& Queue::Back()
 	{
 #if 0
@@ -100,7 +100,7 @@ public:
 		}	
 		return s1.top();
 	}
-	//ÅĞ¶Ï¶ÓÁĞÊÇ·ñÎª¿Õ
+	//åˆ¤æ–­é˜Ÿåˆ—æ˜¯å¦ä¸ºç©º
 	bool Queue::Empty()
 	{
 #if 0
@@ -111,7 +111,7 @@ public:
 #endif
 		return s1.empty() && s2.empty();
 	}
-	//·µ»Ø¶ÓÁĞ´óĞ¡
+	//è¿”å›é˜Ÿåˆ—å¤§å°
 	int Queue::Size()
 	{
 		return s1.size() + s2.size();

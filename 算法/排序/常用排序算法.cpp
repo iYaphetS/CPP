@@ -10,7 +10,7 @@ using namespace std;
 //1. merge(iterator beg1, iterator end1, iterator beg2, iterator end2, iterator dest)
 void test01()
 {
-	//ÒªÇó½«Á½¸öÒÑ¾­ÓĞĞò£¨ÇÒÁ½¸ö¶¼ÊÇÉıĞò»òÕß½µĞò£©µÄĞòÁĞ£¬°´ÕÕÔ­À´µÄË³Ğò·Åµ½ĞÂÈİÆ÷ÖĞ
+	//è¦æ±‚å°†ä¸¤ä¸ªå·²ç»æœ‰åºï¼ˆä¸”ä¸¤ä¸ªéƒ½æ˜¯å‡åºæˆ–è€…é™åºï¼‰çš„åºåˆ—ï¼ŒæŒ‰ç…§åŸæ¥çš„é¡ºåºæ”¾åˆ°æ–°å®¹å™¨ä¸­
 	vector<int> v1 = {1, 2, 4, 6, 8, 10};
 	vector<int> v2 = {3, 5, 8, 11, 12};
 	vector<int> v;
@@ -23,7 +23,7 @@ void test01()
 	});
 	cout << endl;
 }
-//mergeÄ¬ÈÏµÄÊÇÉıĞò£¬Èç¹ûÊÇ½µĞò£¬ÒªÊÖ¶¯Ìí¼Ó½µĞò¹æÔò
+//mergeé»˜è®¤çš„æ˜¯å‡åºï¼Œå¦‚æœæ˜¯é™åºï¼Œè¦æ‰‹åŠ¨æ·»åŠ é™åºè§„åˆ™
 void test02()
 {
 	vector<int> v1;
@@ -47,7 +47,7 @@ void test02()
 }
 
 //2. sort(iterator beg, iterator end, _callback)
-//ÒªÇóµü´úÆ÷±ØĞëÊÇËæ»úµü´úÆ÷----vector dequeÁ½ÖÖ
+//è¦æ±‚è¿­ä»£å™¨å¿…é¡»æ˜¯éšæœºè¿­ä»£å™¨----vector dequeä¸¤ç§
 void test03()
 {
 	vector<int> v = {1,3, 4, 6, -1};
@@ -61,7 +61,7 @@ void test03()
 	cout << endl;
 }
 
-//´òÂÒË³Ğò
+//æ‰“ä¹±é¡ºåº
 //3. random_shuffle(iterator beg, iterator end) 
 void test04()
 {

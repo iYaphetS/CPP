@@ -32,7 +32,7 @@ Array::~Array()
 	}
 }
 
-//Î²²¿²åÈë
+//å°¾éƒ¨æ’å…¥
 void Array::pushBack(const int &val)
 {
 	if (this->size == this->capicity)
@@ -42,7 +42,7 @@ void Array::pushBack(const int &val)
 	this->paddress[this->size] = val;
 	this->size++;
 }
-//Í·²¿²åÈë
+//å¤´éƒ¨æ’å…¥
 void Array::pushFront(const int &val)
 {
 	if (this->size == this->capicity)
@@ -56,13 +56,13 @@ void Array::pushFront(const int &val)
 	this->paddress[0] = val;
 	this->size++;
 }
-//»ñµÃÖ¸¶¨Î»ÖÃÔªËØ
+//è·å¾—æŒ‡å®šä½ç½®å…ƒç´ 
 int& Array::at(int index)
 {
-	//ÓÃÓÚ´«À´²»ºÏ·¨µÄÏÂ±ê£¬ÎÒÃÇÊÇÎŞ·¨×ö³ö´¦Àí£¬ÕâÖÖÇé¿ö³öÏÖÔ½½ç³ö´í£¬ÓĞÓÃ»§¿ØÖÆ
+	//ç”¨äºä¼ æ¥ä¸åˆæ³•çš„ä¸‹æ ‡ï¼Œæˆ‘ä»¬æ˜¯æ— æ³•åšå‡ºå¤„ç†ï¼Œè¿™ç§æƒ…å†µå‡ºç°è¶Šç•Œå‡ºé”™ï¼Œæœ‰ç”¨æˆ·æ§åˆ¶
 	return this->paddress[index];
 }
-//É¾³ıÖ¸¶¨Î»ÖÃÔªËØ
+//åˆ é™¤æŒ‡å®šä½ç½®å…ƒç´ 
 void Array::deleteArr(int index)
 {
 	if (index < 0 || index > this->size - 1)
@@ -80,7 +80,7 @@ int Array::getcapicity()
 	return this->capicity;
 }
 
-//¸³Öµ=ÖØÔØ--------¾ÍÊÇÎö¹¹º¯Êı¼ÓÉÏ¿½±´¹¹Ôìº¯Êı
+//èµ‹å€¼=é‡è½½--------å°±æ˜¯ææ„å‡½æ•°åŠ ä¸Šæ‹·è´æ„é€ å‡½æ•°
 Array& Array::operator=(Array &arr)
 {
 	if (this->paddress != NULL)
@@ -99,19 +99,19 @@ Array& Array::operator=(Array &arr)
 	return *this;
 }
 
-//Êı¾İÊäÈë£¬<<ÖØÔØ ----------arr << 1 << 2
+//æ•°æ®è¾“å…¥ï¼Œ<<é‡è½½ ----------arr << 1 << 2
 Array& Array::operator<<(int val)
 {
 	pushBack(val);
 	return *this;
 }
-//ÏÂ±ê[]ÖØÔØ
+//ä¸‹æ ‡[]é‡è½½
 int& Array::operator[](int index)
 {
 	return this->paddress[index];
 }
 
-//Êı×éÊä³ö£¬<<ÖØÔØ ----------cout << arr;
+//æ•°ç»„è¾“å‡ºï¼Œ<<é‡è½½ ----------cout << arr;
 ostream& operator<<(ostream &os, Array &arr)
 {
 	for (int i = 0; i < arr.size; i++)

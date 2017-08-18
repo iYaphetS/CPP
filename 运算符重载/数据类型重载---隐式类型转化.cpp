@@ -34,8 +34,8 @@ private:
 	int age;
 };
 
-//×Ô¶¨ÒåµÄ¶ÔÏóÐèÒª×ª»»ÆäËûÀàÐÍ£¬ÐèÒªÌá¹©ÏàÓ¦µÄÒþÊ½ÀàÐÍ×ª»»¹æÔò
-//operator Êý¾ÝÀàÐÍ() {return Êý¾ÝÀàÐÍ¶ÔÓ¦µÄÖµ}
+//è‡ªå®šä¹‰çš„å¯¹è±¡éœ€è¦è½¬æ¢å…¶ä»–ç±»åž‹ï¼Œéœ€è¦æä¾›ç›¸åº”çš„éšå¼ç±»åž‹è½¬æ¢è§„åˆ™
+//operator æ•°æ®ç±»åž‹() {return æ•°æ®ç±»åž‹å¯¹åº”çš„å€¼}
 void test()
 {
 	Person p1("mike", 10);

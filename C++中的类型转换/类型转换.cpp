@@ -34,7 +34,7 @@ void test2()
 	derived *d = NULL;
 
 	b = dynamic_cast<base *>(d);
-	d = dynamic_cast<derived *>(b);//ÒªÓĞĞéº¯Êı
+	d = dynamic_cast<derived *>(b);//è¦æœ‰è™šå‡½æ•°
 
 }
 int main()

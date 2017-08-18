@@ -28,7 +28,7 @@ void test01()
 	/*
 	_Fn1 for_each(_InIt _First, _InIt _Last, _Fn1 _Func)
 
-	return (_Func);//·µ»ØµÄ_FuncÒÑ¾­¸Ä±ä
+	return (_Func);//è¿”å›çš„_Funcå·²ç»æ”¹å˜
 	*/
 	cout << endl;
 	cout << p.count << endl;//0
@@ -49,8 +49,8 @@ void test02()
 	vector<int> v1 = {1, 2, 3, 4, 5};
 	vector<int> dst1;
 	vector<int> dst2;
-	dst1.resize(v1.size());//¶Ôdst1ÈİÆ÷Ò»¶¨Òª¿ª±ÙÄÚ´æ³õÊ¼»¯
-	//ÒòÎªtransformÄÚ²¿ÊÇ¸³Öµ²Ù×÷
+	dst1.resize(v1.size());//å¯¹dst1å®¹å™¨ä¸€å®šè¦å¼€è¾Ÿå†…å­˜åˆå§‹åŒ–
+	//å› ä¸ºtransformå†…éƒ¨æ˜¯èµ‹å€¼æ“ä½œ
 	dst2.resize(v1.size());
 	transform(v1.begin(), v1.end(), dst1.begin(), mytransform());
 	/*

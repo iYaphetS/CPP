@@ -4,19 +4,19 @@
 
 dragonsword::dragonsword()
 {
-	//基础伤害
+	//鍩虹浼ゅ
 	Basedamage = 30;
-	//基础暴击伤害加成
+	//鍩虹鏆村嚮浼ゅ鍔犳垚
 	Basecritdamage = 100;
-	//基础暴击发生概率
+	//鍩虹鏆村嚮鍙戠敓姒傜巼
 	Basecritrate = 40;
-	//基础闪避几率
+	//鍩虹闂伩鍑犵巼
 	Baseevasionrate = 30;
-	//武器名称
-	name = "屠龙刀";
-	//晕眩几率
+	//姝﹀櫒鍚嶇О
+	name = "灞犻緳鍒�";
+	//鏅曠湬鍑犵巼
 	stunrate = 20;
-	//晕眩回合
+	//鏅曠湬鍥炲悎
 	stunround = 1;
 }
 

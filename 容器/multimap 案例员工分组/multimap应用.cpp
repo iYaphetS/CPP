@@ -4,13 +4,13 @@ using namespace std;
 #include <map>
 #include <ctime>
 #include <string>
-#define SALE_DEPATMENT 1 //ÏúÊÛ²¿ÃÅ
-#define DEVELOP_DEPATMENT 2 //ÑĞ·¢²¿ÃÅ
-#define FINACIAL_DEPATMENT 3 //²ÆÎñ²¿ÃÅ
+#define SALE_DEPATMENT 1 //é”€å”®éƒ¨é—¨
+#define DEVELOP_DEPATMENT 2 //ç ”å‘éƒ¨é—¨
+#define FINACIAL_DEPATMENT 3 //è´¢åŠ¡éƒ¨é—¨
 
 /*
-½«Ô±¹¤µÄĞÅÏ¢·ÅÔÚlistµÄÈİÆ÷ÖĞ
-È»ºó½«²¿ÃÅºÍÔ±¹¤·ÅÔÚmulitmapÖĞ
+å°†å‘˜å·¥çš„ä¿¡æ¯æ”¾åœ¨listçš„å®¹å™¨ä¸­
+ç„¶åå°†éƒ¨é—¨å’Œå‘˜å·¥æ”¾åœ¨mulitmapä¸­
 */
 class Employee
 {
@@ -28,7 +28,7 @@ void createEmployee(list<Employee> &worker)
 	for (int i = 0; i < nameseed.size(); ++i)
 	{
 		Employee temp;
-		temp.name = "Ô±¹¤";
+		temp.name = "å‘˜å·¥";
 		temp.name += nameseed[i];
 
 		temp.salary = rand() % 5001 + 5000;
@@ -50,22 +50,22 @@ void setGroup(list<Employee> &worker, multimap<int, Employee> &group)
 }
 void showEmployeeByDepartment(multimap<int, Employee> &group, int partmentid)
 {
-	int num = group.count(partmentid);//¸ù¾İ²¿ÃÅ±àºÅÈ·¶¨´Ë²¿ÃÅÏÂµÄÔ±¹¤Êı
-	auto pos = group.find(partmentid);//¸ù¾İ²¿ÃÅ±àºÅ£¬À´È·¶¨´Ë²¿ÃÅµÄËùÓĞÔ±¹¤
+	int num = group.count(partmentid);//æ ¹æ®éƒ¨é—¨ç¼–å·ç¡®å®šæ­¤éƒ¨é—¨ä¸‹çš„å‘˜å·¥æ•°
+	auto pos = group.find(partmentid);//æ ¹æ®éƒ¨é—¨ç¼–å·ï¼Œæ¥ç¡®å®šæ­¤éƒ¨é—¨çš„æ‰€æœ‰å‘˜å·¥
 
 	for (int i = 0; i < num; i++)
 	{
-		cout << "ĞÕÃû:" << pos->second.name << "  Ğ½Ë®:" << pos->second.salary << endl;
+		cout << "å§“å:" << pos->second.name << "  è–ªæ°´:" << pos->second.salary << endl;
 		pos++;
 	}
 }
 void showEveryGroupEmployee(multimap<int, Employee> &group)
 {
-	cout << "ÏúÊÛ²¿ÃÅĞÅÏ¢£º-------" << endl;
+	cout << "é”€å”®éƒ¨é—¨ä¿¡æ¯ï¼š-------" << endl;
 	showEmployeeByDepartment(group, SALE_DEPATMENT);
-	cout << "ÑĞ·¢²¿ÃÅĞÅÏ¢£º-------" << endl;
+	cout << "ç ”å‘éƒ¨é—¨ä¿¡æ¯ï¼š-------" << endl;
 	showEmployeeByDepartment(group, DEVELOP_DEPATMENT);
-	cout << "²ÆÎñ²¿ÃÅĞÅÏ¢£º--------" << endl;
+	cout << "è´¢åŠ¡éƒ¨é—¨ä¿¡æ¯ï¼š--------" << endl;
 	showEmployeeByDepartment(group, FINACIAL_DEPATMENT);
 
 }

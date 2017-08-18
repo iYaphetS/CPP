@@ -24,7 +24,7 @@ void createPlayer(map<int, player> &plist, vector<int> &pid)
 	for (int i = 0; i < 24; i++)
 	{
 		player temp;
-		temp.Name = "Ñ¡ÊÖ";
+		temp.Name = "é€‰æ‰‹";
 		temp.Name += nameseed[i];
 
 		for (int j = 0; j < 3; j++)
@@ -62,12 +62,12 @@ void playerMatch(int round, vector<int> &pid, map<int, player> &plist, vector<in
 
 		//plist[*it].score[round - 1] = avg;
 #if 0
-		//ÍêÈ«´íÎóµÄÐ´·¨
+		//å®Œå…¨é”™è¯¯çš„å†™æ³•
 		map<int, player>::iterator pit = plist.begin();
 		pit->second.score[round - 1] = avg;
 #endif
 
-		//É¸Ñ¡³ö½ú¼¶Ñ¡ÊÖ
+		//ç­›é€‰å‡ºæ™‹çº§é€‰æ‰‹
 		group.insert(make_pair(avg, *it));
 
 		if (group.size() == 6)
@@ -86,7 +86,7 @@ void playerMatch(int round, vector<int> &pid, map<int, player> &plist, vector<in
 
 void showPlayer(int round, vector<int>&uppid, map<int, player> &plist)
 {
-	cout << "µÚ" << round << "½ú¼¶Ñ¡ÊÖµÄ³É¼¨£º" << endl;
+	cout << "ç¬¬" << round << "æ™‹çº§é€‰æ‰‹çš„æˆç»©ï¼š" << endl;
 
 	for (vector<int>::iterator it = uppid.begin(); it != uppid.end(); it++)
 	{

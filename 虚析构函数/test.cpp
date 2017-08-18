@@ -6,7 +6,7 @@ class base
 public:
 	base()
 	{
-		cout << "base:¹¹Ôìº¯Êý" << endl;
+		cout << "base:æž„é€ å‡½æ•°" << endl;
 	}
 	void test01()
 	{
@@ -19,7 +19,7 @@ public:
 	}
 	virtual ~base()
 	{
-		cout << "base:Îö¹¹º¯Êý" << endl;
+		cout << "base:æžæž„å‡½æ•°" << endl;
 	}
 };
 
@@ -29,7 +29,7 @@ class derived :public base
 public:
 	derived()
 	{
-		cout << "derived:¹¹Ôìº¯Êý" << endl;
+		cout << "derived:æž„é€ å‡½æ•°" << endl;
 	}
 	void test01()
 	{
@@ -47,7 +47,7 @@ public:
 	}
 	virtual ~derived()
 	{
-		cout << "derived:Îö¹¹º¯Êý" << endl;
+		cout << "derived:æžæž„å‡½æ•°" << endl;
 	}
 	
 };
@@ -68,23 +68,23 @@ int main()
 	//ss s;
 	p->test01();
 	delete p;
-	/*ÔÚ±àÒëdelete pµÄÊ±ºò£¬ÀàbaseÖÐÎö¹¹º¯ÊýÃ»ÓÐvirtual¹Ø¼ü×Ö
-	¾²Ì¬Áª±àµÄÊ±ºòpµÄÈ·Ö¸ÏòÁËÒ»¿éÄÚ´æ¿Õ¼ä£¬µ«ÊÇÕâ¿éÄÚ´æ¿Õ¼ä
-	µÄÄÚÈÝ£¬±àÒëÆ÷ÊÇ²»ÖªµÀµÄ£¬£¨¾Í±ÈÈçint a = 10;±àÒëÖ»»á¸ù¾ÝaµÄÀàÐÍ
-	ÎªËü·ÖÅä4¸ö×Ö½ÚµÄ¿Õ¼äµ«ÊÇaÎª¶àÉÙÊÇ²»ÖªµÀµÄ£©ËùÒÔÔÚ±àÒëµÄÊ±ºò¾Í
-	Ä¬ÈÏÓëbase°ó¶¨£¨Ôç°ó¶¨£©ÁË
-	²¢²»»á¸ù¾ÝËüÖ¸ÏòµÄÄÚÈÝÀ´°ó¶¨£¨¾²Ì¬»á¸ù¾Ý¶ÔÏóµÄÀàÐÍÀ´µ÷ÓÃº¯ÊýµÄ£©
-	ËùÒÔÔÚdelete p£»Ö»»áµ÷ÓÃbaseÀàµÄÎö¹¹º¯Êý
-	µ«ÊÇ±àÒëÆ÷·¢ÏÖÀàÖÐÄ³¸öº¯ÊýÓÐvirtual£¬¾Í²»»áÔÚ±àÒëº¯Êýµ÷ÓÃµÄÊ±ºò½«º¯ÊýÓë¶ÔÏó
-	½øÐÐ°ó¶¨£¬¾ÍÊÇËùÎ½µÄ¶¯Ì¬Áª±à
-	ÔÚ×ÓÀà¶ÔÏó³õÊ¼»¯£¨µ÷ÓÃ¹¹Ôìº¯Êý»á¶Ô¼Ì³Ð¹ýÀ´µÄÐéÖ¸Õë´ÓÐÂ¸³Öµ£©
-	ºó¼Ì³Ð¹ýÀ´µÄÐéº¯ÊýÖ¸ÕëÖ¸Ïò·¢Éú±ä»¯¾Í»áÖ¸Ïò×ÓÀàµÄÐéº¯Êý±í
-	ÔÚÔËÐÐ½×¶Îµ÷pµ÷ÓÃµÄº¯ÊýÓë¾ßÌå¶ÔÏó°ó¶¨£¬p¾Í»áµ÷ÓÃ×ÓÀàµÄÐéº¯ÊýÖ¸ÕëÖ¸ÏòµÄÎö¹¹º¯Êý
+	/*åœ¨ç¼–è¯‘delete pçš„æ—¶å€™ï¼Œç±»baseä¸­æžæž„å‡½æ•°æ²¡æœ‰virtualå…³é”®å­—
+	é™æ€è”ç¼–çš„æ—¶å€™pçš„ç¡®æŒ‡å‘äº†ä¸€å—å†…å­˜ç©ºé—´ï¼Œä½†æ˜¯è¿™å—å†…å­˜ç©ºé—´
+	çš„å†…å®¹ï¼Œç¼–è¯‘å™¨æ˜¯ä¸çŸ¥é“çš„ï¼Œï¼ˆå°±æ¯”å¦‚int a = 10;ç¼–è¯‘åªä¼šæ ¹æ®açš„ç±»åž‹
+	ä¸ºå®ƒåˆ†é…4ä¸ªå­—èŠ‚çš„ç©ºé—´ä½†æ˜¯aä¸ºå¤šå°‘æ˜¯ä¸çŸ¥é“çš„ï¼‰æ‰€ä»¥åœ¨ç¼–è¯‘çš„æ—¶å€™å°±
+	é»˜è®¤ä¸Žbaseç»‘å®šï¼ˆæ—©ç»‘å®šï¼‰äº†
+	å¹¶ä¸ä¼šæ ¹æ®å®ƒæŒ‡å‘çš„å†…å®¹æ¥ç»‘å®šï¼ˆé™æ€ä¼šæ ¹æ®å¯¹è±¡çš„ç±»åž‹æ¥è°ƒç”¨å‡½æ•°çš„ï¼‰
+	æ‰€ä»¥åœ¨delete pï¼›åªä¼šè°ƒç”¨baseç±»çš„æžæž„å‡½æ•°
+	ä½†æ˜¯ç¼–è¯‘å™¨å‘çŽ°ç±»ä¸­æŸä¸ªå‡½æ•°æœ‰virtualï¼Œå°±ä¸ä¼šåœ¨ç¼–è¯‘å‡½æ•°è°ƒç”¨çš„æ—¶å€™å°†å‡½æ•°ä¸Žå¯¹è±¡
+	è¿›è¡Œç»‘å®šï¼Œå°±æ˜¯æ‰€è°“çš„åŠ¨æ€è”ç¼–
+	åœ¨å­ç±»å¯¹è±¡åˆå§‹åŒ–ï¼ˆè°ƒç”¨æž„é€ å‡½æ•°ä¼šå¯¹ç»§æ‰¿è¿‡æ¥çš„è™šæŒ‡é’ˆä»Žæ–°èµ‹å€¼ï¼‰
+	åŽç»§æ‰¿è¿‡æ¥çš„è™šå‡½æ•°æŒ‡é’ˆæŒ‡å‘å‘ç”Ÿå˜åŒ–å°±ä¼šæŒ‡å‘å­ç±»çš„è™šå‡½æ•°è¡¨
+	åœ¨è¿è¡Œé˜¶æ®µè°ƒpè°ƒç”¨çš„å‡½æ•°ä¸Žå…·ä½“å¯¹è±¡ç»‘å®šï¼Œpå°±ä¼šè°ƒç”¨å­ç±»çš„è™šå‡½æ•°æŒ‡é’ˆæŒ‡å‘çš„æžæž„å‡½æ•°
 	
-	ÔÚ±àÒëÄ³¸öº¯ÊýµÄÊ±ºò£¬¿´µ½µ÷ÓÃÕâ¸öº¯ÊýµÄ¶ÔÏóÊµÏÖÕâ¸öº¯ÊýÃ»ÓÐvirtual
-	¹Ø¼ü×Ö£¬¾Í»áÔÚ±àÒëµÄÊ±ºòÓëÕâ¸ö¶ÔÏó½øÐÐ°ó¶¨
-	Èç¹ûÕâ¸ö¶ÔÏóÊµÏÖÕâ¸öº¯ÊýÓÐvirtual¹Ø¼ü×Ö£¬ÄÇÃ´Õâ¸öº¯Êý¾Í²»»á°ó¶¨Õâ¸ö¶ÔÏó£¬
-	»áÔÚÔËÐÐµÄÊ±ºò¸ù¾ÝÊµ¼ÊµÄ¶ÔÏóÓëÖ®°ó¶¨
+	åœ¨ç¼–è¯‘æŸä¸ªå‡½æ•°çš„æ—¶å€™ï¼Œçœ‹åˆ°è°ƒç”¨è¿™ä¸ªå‡½æ•°çš„å¯¹è±¡å®žçŽ°è¿™ä¸ªå‡½æ•°æ²¡æœ‰virtual
+	å…³é”®å­—ï¼Œå°±ä¼šåœ¨ç¼–è¯‘çš„æ—¶å€™ä¸Žè¿™ä¸ªå¯¹è±¡è¿›è¡Œç»‘å®š
+	å¦‚æžœè¿™ä¸ªå¯¹è±¡å®žçŽ°è¿™ä¸ªå‡½æ•°æœ‰virtualå…³é”®å­—ï¼Œé‚£ä¹ˆè¿™ä¸ªå‡½æ•°å°±ä¸ä¼šç»‘å®šè¿™ä¸ªå¯¹è±¡ï¼Œ
+	ä¼šåœ¨è¿è¡Œçš„æ—¶å€™æ ¹æ®å®žé™…çš„å¯¹è±¡ä¸Žä¹‹ç»‘å®š
 	*/
 
 	return 0;

@@ -3,20 +3,20 @@ using namespace std;
 #include <string>
 #include <vector>
 
-//vectorÈİÆ÷ÊÇ¶¯Ì¬Êı×éÀàÄ£°å£¬ÀàÖĞµÄµü´úÆ÷(·ÃÎÊÈİÆ÷ÖĞËùÓĞÊı¾İµÄ·½·¨)Ö§³ÖËæ»ú·ÃÎÊ
+//vectorå®¹å™¨æ˜¯åŠ¨æ€æ•°ç»„ç±»æ¨¡æ¿ï¼Œç±»ä¸­çš„è¿­ä»£å™¨(è®¿é—®å®¹å™¨ä¸­æ‰€æœ‰æ•°æ®çš„æ–¹æ³•)æ”¯æŒéšæœºè®¿é—®
 
-//´æ·Å»ù±¾Êı¾İÀàĞÍ
+//å­˜æ”¾åŸºæœ¬æ•°æ®ç±»å‹
 void test01()
 {
 	vector<int> v;
-	//Î²²¿²åÈë
+	//å°¾éƒ¨æ’å…¥
 	v.push_back(2);
 	v.push_back(4);
 	v.push_back(8);
 	v.push_back(1);
 
-	//±éÀú   typedef T* iterator
-	//ÈİÆ÷ÖĞÌá¹©µü´úµÄ·½·¨v.begin()Ö¸ÏòÈİÆ÷ÖĞµÚÒ»¸öÔªËØ£¬v.end()Ö¸ÏòÈİÆ÷µÄ×îºóÒ»¸öÔªËØµÄÏÂÒ»¸öÎ»ÖÃ
+	//éå†   typedef T* iterator
+	//å®¹å™¨ä¸­æä¾›è¿­ä»£çš„æ–¹æ³•v.begin()æŒ‡å‘å®¹å™¨ä¸­ç¬¬ä¸€ä¸ªå…ƒç´ ï¼Œv.end()æŒ‡å‘å®¹å™¨çš„æœ€åä¸€ä¸ªå…ƒç´ çš„ä¸‹ä¸€ä¸ªä½ç½®
 	for (vector<int>::iterator it = v.begin(); it != v.end(); ++it)
 	{
 		cout << *it << " ";
@@ -48,7 +48,7 @@ ostream& operator<<(ostream &os, const Person&p)
 	return os;
 }
 
-//´æ·Å¸´ÔÓÊı¾İÀàĞÍ
+//å­˜æ”¾å¤æ‚æ•°æ®ç±»å‹
 void test02()
 {
 	vector<Person> v;
@@ -62,7 +62,7 @@ void test02()
 	v.push_back(p3);
 	v.push_back(p4);
 
-	for (auto it : v)//ÕâÖÖĞ´·¨ÊÇ¶ÔÏó
+	for (auto it : v)//è¿™ç§å†™æ³•æ˜¯å¯¹è±¡
 	{
 		cout << it << endl;
 	}
@@ -81,13 +81,13 @@ void test03()
 	v.push_back(&p3);
 	v.push_back(&p4);
 
-	for (auto it : v)//ÕâÖÖĞ´·¨ÊÇÖ¸Ïò¶ÔÏóµÄÖ¸Õë
+	for (auto it : v)//è¿™ç§å†™æ³•æ˜¯æŒ‡å‘å¯¹è±¡çš„æŒ‡é’ˆ
 	{
 		cout << *it << endl;
 	}
 }
 
-//ÈİÆ÷Ç¶Ì×ÈİÆ÷
+//å®¹å™¨åµŒå¥—å®¹å™¨
 void test04()
 {
 	vector<vector<int>> v;

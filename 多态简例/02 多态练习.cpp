@@ -1,19 +1,19 @@
 #include <iostream>
 using namespace std;
 /*
-ʹ�ö�̬ʵ��һ��ͼ�λ��࣬�������ࣺ���κ�Բ��
-��������������󷽷����ܳ������
-����ֱ���д����������
-����дһ��ȫ�ֵļ��㷽��������Ϊ����ָ�룬�����������ʱ��
-�����Ӧ���ܳ������
+使用多态实现一个图形基类，两个子类：矩形和圆形
+基类包含两个抽象方法：周长和面积
+子类分别重写这两个方法
+另外写一个全局的计算方法，参数为基类指针，传入子类对象时，
+输出对应的周长和面积
 */
-//ͼ�λ���
+//图形基类
 class graph
 {
 public:
-	//�õ��ܳ�
+	//得到周长
 	virtual double getgirth() = 0;
-	//�õ����
+	//得到面积
 	virtual double getarea() = 0;
 };
 
@@ -63,17 +63,17 @@ private:
 
 void calcgraph(graph &g)
 {
-	cout << "�ܳ���" << g.getgirth() << endl;
-	cout << "�����" <<g.getarea() << endl;
+	cout << "周长：" << g.getgirth() << endl;
+	cout << "面积：" <<g.getarea() << endl;
 }
 void test()
 {
 	rectangle rec(3, 7);
-	cout << "���ε���Ϣ��" << endl;
+	cout << "矩形的信息：" << endl;
 	calcgraph(rec);
 
 	circle cir(2, 3, 5);
-	cout << "Բ����Ϣ��" << endl;
+	cout << "圆的信息：" << endl;
 	calcgraph(cir);
 }
 int main()

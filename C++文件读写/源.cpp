@@ -9,21 +9,21 @@ public:
 	person()
 	{
 		this->age = 0;
-		cout << "ÎŞ²Î¹¹Ôì" << endl;
+		cout << "æ— å‚æ„é€ " << endl;
 	}
 	person(int age)
 	{
 		this->age = age;
-		cout << "ÓĞ²Î¹¹Ôì" << endl;
+		cout << "æœ‰å‚æ„é€ " << endl;
 	}
 	person(person &p)
 	{
 		this->age = p.age;
-		cout << "¿½±´¹¹Ôì" << endl;
+		cout << "æ‹·è´æ„é€ " << endl;
 	}
 	~person()
 	{
-		cout << "Îö¹¹º¯Êı" << endl;
+		cout << "ææ„å‡½æ•°" << endl;
 	}
 };
 

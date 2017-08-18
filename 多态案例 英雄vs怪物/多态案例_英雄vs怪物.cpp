@@ -15,7 +15,7 @@ void test()
 	dragonsword dword;
 
 	int round = 1;
-	cout << "ÇëÑ¡ÔñÄãµÄÎäÆ÷(1--Ä¾½£ 2--Áúµ¶):";
+	cout << "è¯·é€‰æ‹©ä½ çš„æ­¦å™¨(1--æœ¨å‰‘ 2--é¾™åˆ€):";
 	int id;
 	cin >> id;
 	if (id == 1)
@@ -30,18 +30,18 @@ void test()
 	{
 		getchar();
 		system("cls");
-		cout << "µÚ" << round << "»ØºÏ" << endl;
+		cout << "ç¬¬" << round << "å›žåˆ" << endl;
 		int ret = h1.heroattackmonster(&m1);
 		if (ret <= 0)
 		{
-			cout << "¹§Ï²ÄãÍ¨¹Ø" << endl;
+			cout << "æ­å–œä½ é€šå…³" << endl;
 			break;
 		}
 
 		ret = m1.monsterattackhero(&h1);
 		if (ret <= 0)
 		{
-			cout << "³äÖµÈÃÄã±äµÃ¸üÇ¿" << endl;
+			cout << "å……å€¼è®©ä½ å˜å¾—æ›´å¼º" << endl;
 			break;
 		}
 		round++;

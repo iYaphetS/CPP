@@ -41,24 +41,24 @@ public:
 public:
 	string name;
 	/*
-	���ڶ��ļ�����ʱ������ڴ�������-----_block_type_is_valid(phead->nblockuse)
-	string���ַ���ֻ��15����Ч�ַ���ʱ����ڶ����ڲ�char����
-	���ǳ�����15���ַ�������ָ��ָ��Ķѿռ�
-	���ļ������������ļ�����Ϊ�����浽�ļ���ֻ��һ���ַ��ĵ�ַ��������رտռ��ͷź�
-	�ļ������ݾͶ����������ڴ�Ƿ����ʣ�
+	会在读文件的是时候出现内存访问溢出-----_block_type_is_valid(phead->nblockuse)
+	string在字符串只有15个有效字符的时候放在对象内部char数组
+	但是超过了15个字符，放在指针指向的堆空间
+	在文件不能这样存文件，因为这样存到文件的只是一串字符的地址，当程序关闭空间释放后
+	文件的内容就读不出来（内存非法访问）
 	*/
 	//char name[64];
 	int age;
 };
 
-//д�ļ�
+//写文件
 void test01()
 {
 	ofstream ofs("person.dat", ios::out | ios::binary);
 
 	if (!ofs)
 	{
-		cout << "�����ļ�ʧ��" << endl;
+		cout << "创建文件失败" << endl;
 		return;
 	}
 
@@ -71,11 +71,11 @@ void test01()
 	{ 
 		int lenth = p[i].name.length();
 		strcpy(buf, p[i].name.c_str());
-		ofs.write(buf, lenth);//����д��ȥ
-		ofs << " ";//�ո�
-		ofs << lenth;//���ֵĳ���
-		ofs << " ";//�ո�
-		ofs << p[i].age;//������д��ȥ
+		ofs.write(buf, lenth);//名字写进去
+		ofs << " ";//空格
+		ofs << lenth;//名字的长度
+		ofs << " ";//空格
+		ofs << p[i].age;//把年龄写进去
 		ofs << '\n';
 		//zhangsan 8 10
 		memset(buf, 0, 1024);
@@ -83,17 +83,17 @@ void test01()
 	ofs.close();
 }
 
-//���ļ�
+//读文件
 void test02()
 {
 	ifstream ifs("person.dat", ios::in | ios::binary);
 
 	if (!ifs)
 	{
-		cout << "�ļ���ʧ��" << endl;
+		cout << "文件打开失败" << endl;
 		return;
 	}
-	//�����ж�
+	//按照行读
 	char buf[1024] = { 0 };
 	char name[64] = { 0 };
 	int len = 0;

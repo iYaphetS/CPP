@@ -2,36 +2,36 @@
 #include <iostream>
 using namespace std;
 
-//¹ØÓÚº¯ÊýµÄ·µ»ØÖµÊÇ·µ»ØÖµ»¹ÊÇ·µ»ØÒýÓÃ£¬Òª¿´Òª²»Òª×ö×óÖµ
+//å…³äºŽå‡½æ•°çš„è¿”å›žå€¼æ˜¯è¿”å›žå€¼è¿˜æ˜¯è¿”å›žå¼•ç”¨ï¼Œè¦çœ‹è¦ä¸è¦åšå·¦å€¼
 class Array
 {
-	//Êý×éÊä³ö£¬<<ÖØÔØ ----------cout << arr;
-	//ÕâÊÇÈ«¾Öº¯ÊýÖØÔØÔËËã·û£¬¾Ö²¿º¯ÊýÖØÔØÒªÔÚ¿â´úÂëÖÐÌí¼Ó£¬²»°²È«
+	//æ•°ç»„è¾“å‡ºï¼Œ<<é‡è½½ ----------cout << arr;
+	//è¿™æ˜¯å…¨å±€å‡½æ•°é‡è½½è¿ç®—ç¬¦ï¼Œå±€éƒ¨å‡½æ•°é‡è½½è¦åœ¨åº“ä»£ç ä¸­æ·»åŠ ï¼Œä¸å®‰å…¨
 	friend ostream& operator<<(ostream &os, Array &arr);
 public:
 	Array();
-	explicit Array(int capicity);//explicit(½ûÖ¹ÒþÊ½ÀàÐÍ×ª»») ÊÇ·ÀÖ¹ÕâÑù³õÊ¼»¯ Array arr = 10;
+	explicit Array(int capicity);//explicit(ç¦æ­¢éšå¼ç±»åž‹è½¬æ¢) æ˜¯é˜²æ­¢è¿™æ ·åˆå§‹åŒ– Array arr = 10;
 	Array(Array &arr);
 	~Array();
 
-	/*Êý×é²Ù×÷º¯Êý*/
-	//Î²²¿²åÈë
+	/*æ•°ç»„æ“ä½œå‡½æ•°*/
+	//å°¾éƒ¨æ’å…¥
 	void pushBack(const int &val);
-	//Í·²¿²åÈë
+	//å¤´éƒ¨æ’å…¥
 	void pushFront(const int &val);
-	//»ñµÃÖ¸¶¨Î»ÖÃÔªËØ
+	//èŽ·å¾—æŒ‡å®šä½ç½®å…ƒç´ 
 	int& at(int index);
-	//É¾³ýÖ¸¶¨Î»ÖÃÔªËØ
+	//åˆ é™¤æŒ‡å®šä½ç½®å…ƒç´ 
 	void deleteArr(int index);
-	//»ñµÃÊý×éµÄÈÝÁ¿
+	//èŽ·å¾—æ•°ç»„çš„å®¹é‡
 	int getcapicity();
 
-	/*ÔËËã·ûÖØÔØ*/
-	//¸³Öµ=ÖØÔØ
+	/*è¿ç®—ç¬¦é‡è½½*/
+	//èµ‹å€¼=é‡è½½
 	Array& operator=(Array &arr);
-	//Êý¾ÝÊäÈë£¬<<ÖØÔØ ----------arr << 1 << 2
+	//æ•°æ®è¾“å…¥ï¼Œ<<é‡è½½ ----------arr << 1 << 2
 	Array& operator<<(int val);
-	//ÏÂ±ê[]ÖØÔØ
+	//ä¸‹æ ‡[]é‡è½½
 	int& operator[](int index);
 	
 private:

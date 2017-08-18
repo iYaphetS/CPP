@@ -6,7 +6,7 @@ using namespace std;
 void test()
 {
 	MyString str1;
-	cout << "ÇëÊäÈë×Ö·û´®£º";
+	cout << "è¯·è¾“å…¥å­—ç¬¦ä¸²ï¼š";
 	cin >> str1;
 	MyString str2(5, 'G');
 	MyString str3(str1);

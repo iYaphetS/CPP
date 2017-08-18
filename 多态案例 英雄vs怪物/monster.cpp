@@ -6,32 +6,32 @@
 monster::monster()
 {
 
-	//»ù´¡ÑªÁ¿
+	//åŸºç¡€è¡€é‡
 	Basehp = 5000;
-	//»ù´¡·ÀÓù
+	//åŸºç¡€é˜²å¾¡
 	Basedefense = 100;
-	//»ù´¡¹¥»÷
+	//åŸºç¡€æ”»å‡»
 	Basedamage = 300;
-	//Ñ£ÔÎ»ØºÏÊý
+	//çœ©æ™•å›žåˆæ•°
 	stunround = 0;
-	//¹¥»÷miss
+	//æ”»å‡»miss
 	attackmiss = false;
-	//Ãû×Ö
+	//åå­—
 	name = "puge";
 }
 int monster::monsterattackhero(hero *h)
 {
 	if (stunround > 0)
 	{
-		cout << "¹ÖÎï" << this->name << "´¦ÓÚÑ£ÔÎ×´Ì¬£¬±¾ÂÖÎÞ·¨¹¥»÷!" << endl;
+		cout << "æ€ªç‰©" << this->name << "å¤„äºŽçœ©æ™•çŠ¶æ€ï¼Œæœ¬è½®æ— æ³•æ”»å‡»!" << endl;
 		stunround--;
-		cout << "Ó¢ÐÛÑªÁ¿£º" << h->Basehp << endl;
+		cout << "è‹±é›„è¡€é‡ï¼š" << h->Basehp << endl;
 		return h->Basehp;
 	}	
 	else if (attackmiss)
 	{
-		cout << "¹ÖÎï" << name << "¹¥»÷miss!" << endl;
-		cout << "Ó¢ÐÛÑªÁ¿£º" << h->Basehp << endl;
+		cout << "æ€ªç‰©" << name << "æ”»å‡»miss!" << endl;
+		cout << "è‹±é›„è¡€é‡ï¼š" << h->Basehp << endl;
 		attackmiss = false;
 		return h->Basehp;
 	}
@@ -40,9 +40,9 @@ int monster::monsterattackhero(hero *h)
 
 	h->Basehp -= totaldamge;
 
-	cout << "¹ÖÎï" << name << "¶ÔÓ¢ÐÛ" << h->name << "Ôì³É" << totaldamge << "µãÉËº¦!" << endl;
+	cout << "æ€ªç‰©" << name << "å¯¹è‹±é›„" << h->name << "é€ æˆ" << totaldamge << "ç‚¹ä¼¤å®³!" << endl;
 
-	cout << "Ó¢ÐÛÑªÁ¿£º" << h->Basehp << endl;
+	cout << "è‹±é›„è¡€é‡ï¼š" << h->Basehp << endl;
 	return h->Basehp;
 }
 

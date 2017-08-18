@@ -14,20 +14,20 @@ public:
 	bool iscrit();
 
 public:
-	//ÑªÁ¿
+	//è¡€é‡
 	int Basehp;
-	//·ÀÓù
+	//é˜²å¾¡
 	int Baseefense;
-	//»ù´¡¹¥»÷Á¦
+	//åŸºç¡€æ”»å‡»åŠ›
 	int Basedamage;
-	//±©»÷ÂÊ
+	//æš´å‡»ç‡
 	int Basecritrate;
-	//±©»÷ÉËº¦
+	//æš´å‡»ä¼¤å®³
 	int Basedcritdamage;
-	//¶ãÉÁÂÊ
+	//èº²é—ªç‡
 	int Baseevasionrate;
-	//ÎäÆ÷
+	//æ­¦å™¨
 	weapon *pWeapon;
-	//Ãû×Ö
+	//åå­—
 	string name;
 };

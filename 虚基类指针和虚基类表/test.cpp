@@ -2,8 +2,6 @@
 using namespace std;
 //#include <cstring>
 //#include <string>
-
-
 class base
 {
 public:
